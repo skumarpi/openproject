@@ -1,7 +1,7 @@
 app:
     name: OpenProject
     code: OPENPROJECT 
-    notify: appz@ecloudcontrol.com
+    notify: skumar@ecloudcontrol.com
 
 build:
     version: 11.3
@@ -11,7 +11,7 @@ build:
     image_template: openproject-11.3
 
 deploy:
-    context: alpha/DEV
+    context: skumarpi/DEV
     replicas: 1
     port:
     - 80
@@ -23,6 +23,6 @@ properties:
     POSTGRES_PORT: 5432
     POSTGRES_DB: openproject
     POSTGRES_USER: openproject
-    POSTGRES_PASSWORD: 
+    POSTGRESQL_OPENPROJECT_PASSWORD: 
       vault: POSTGRESQL_OPENPROJECT_PASSWORD
     revision: 33
